@@ -1,0 +1,83 @@
+{% extends "navi.html" %}
+
+{% block title %} Contact Me {% endblock title %}
+
+{% block body %}
+    <div class="contact-section" style="padding: 60px 20px; text-align: center; background: linear-gradient(135deg, #00bcd4, #3f51b5);">
+        <h1 style="font-size: 3.5rem; font-weight: 700; color: #fff; text-transform: uppercase; margin-bottom: 10px; text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.3);">Contact Me</h1>
+        <p style="font-size: 1.2rem; color: #f0f0f0; font-weight: 300;">Feel free to reach out, whether it's a question or just to say hi! I'm always open to new opportunities and discussions.</p>
+        
+        <div class="contact-form" style="max-width: 600px; margin: 50px auto; background-color: #fff; padding: 40px; border-radius: 12px; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1); animation: fadeIn 1.5s ease-in-out; border-top: 4px solid #00bcd4;">
+            <form action="/contact" method="POST">
+                {% csrf_token %}
+                <div style="margin-bottom: 20px;">
+                    <label for="name" style="display: block; font-weight: bold; margin-bottom: 10px; font-size: 1.2rem; color: #333;">Your Name</label>
+                    <input type="text" id="name" name="name" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1px solid #ddd; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="email" style="display: block; font-weight: bold; margin-bottom: 10px; font-size: 1.2rem; color: #333;">Your Email</label>
+                    <input type="email" id="email" name="email" required style="width: 100%; padding: 14px; border-radius: 8px; border: 1px solid #ddd; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="message" style="display: block; font-weight: bold; margin-bottom: 10px; font-size: 1.2rem; color: #333;">Your Message</label>
+                    <textarea id="message" name="message" rows="5" style="width: 100%; padding: 14px; border-radius: 8px; border: 1px solid #ddd; font-size: 1.1rem; transition: all 0.3s ease; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);"></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" style="background-color: #00bcd4; color: white; border: none; padding: 14px 24px; border-radius: 8px; font-size: 1.1rem; cursor: pointer; transition: transform 0.3s ease, background-color 0.3s ease; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="contact-info" style="background-color: #333; padding: 60px 20px; text-align: center; animation: fadeInUp 2s ease-in-out;">
+        <h2 style="font-size: 2.5rem; margin-bottom: 30px; color: #fff;">Other Ways to Reach Me</h2>
+        <p style="font-size: 1.2rem; color: #bbb; font-weight: 300;">If you prefer, you can also contact me using the following methods:</p>
+        <ul style="list-style-type: none; padding: 0; font-size: 1.2rem; color: #ddd; margin-top: 20px;">
+            <li><strong style="color: #00bcd4;">Email:</strong> kcsubham311@gmail.com</li>
+            <li><strong style="color: #00bcd4;">Phone:</strong> (+977) 9821172313</li>
+            <li><strong style="color: #00bcd4;">Address:</strong> Kathmandu, Nepal</li>
+        </ul>
+    </div>
+
+    <style>
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .contact-form input:focus, .contact-form textarea:focus {
+            border-color: #00bcd4;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+        }
+
+        .contact-form button:hover {
+            background-color: #0288d1;
+            transform: scale(1.05);
+        }
+
+        .contact-info ul li {
+            margin-bottom: 12px;
+        }
+    </style>
+{% endblock body %}

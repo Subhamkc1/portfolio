@@ -1,0 +1,135 @@
+{% extends "navi.html" %}
+
+{% block title %} About Me {% endblock title %}
+
+{% block body %}
+    <div class="about-section" style="padding: 80px 20px; background-color: #f9f9f9; text-align: center; animation: fadeIn 1s ease-in-out;">
+        <h1 style="font-size: 3.5rem; font-weight: 700; margin-bottom: 20px; color: #333;">About Me</h1>
+        <p style="font-size: 1.3rem; font-weight: 300; color: #555; max-width: 800px; margin: 0 auto 40px;">I am a passionate developer skilled in building interactive, accessible, and visually appealing websites. My expertise includes front-end development, Android application development, and creating responsive web applications. I'm always eager to learn new technologies and improve my skills. You can visit my socials to know more about me.</p>
+
+        <div class="profile-image-container" style="display: flex; justify-content: center; margin-bottom: 40px; animation: slideIn 1.5s ease-in-out;">
+            <img src="/static/1.jpg" alt="" style="border-radius: 50%; width: 250px; height: 250px; object-fit: cover; box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); transition: transform 0.3s ease;">
+        </div>
+
+        <div class="skills-container" style="display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; animation: fadeInUp 2s ease-in-out;">
+            <div style="flex: 1 1 200px; text-align: center;">
+                <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" style="width: 100px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;"></p>
+            </div>
+            <div style="flex: 1 1 200px; text-align: center;">
+                <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" style="width: 100px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;"></p>
+            </div>
+            <div style="flex: 1 1 200px; text-align: center;">
+                <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" style="width: 100px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;"></p>
+            </div>
+            <div style="flex: 1 1 200px; text-align: center;">
+                <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" style="width: 100px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;"></p>
+            </div>
+            <div style="flex: 1 1 200px; text-align: center;">
+                <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" style="width: 100px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;"></p>
+            </div>
+            <div style="flex: 1 1 200px; text-align: center;">
+                <img src="https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white" alt="Android" style="width: 100px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;"></p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;">
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: #333;">Reach Out</h2>
+            <p style="font-size: 1.3rem; color: #555;">Feel free to connect with me via my socials!</p>
+            <div style="display: flex; justify-content: center; gap: 30px; margin-top: 20px;">
+                <a href="https://github.com/Subhamkc1" target="_blank" style="text-decoration: none;">
+                    <img src="https://img.shields.io/badge/Follow%20on-GitHub-000000?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" style="width: 150px;">
+                </a>
+                <a href="https://www.instagram.com/_subham_kc__"><img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white" height=25></a>
+
+                <a href="https://t.me/GuyFromSomewhere"><img src="https://img.shields.io/badge/telegram-%231DA1F2.svg?&style=for-the-badge&logo=telegram&logoColor=white" height=25></a>
+
+            </div>
+        </div>
+    </div>
+
+    <style>
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(50px);
+                opacity: 0;
+            }
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .about-section {
+            padding: 80px 20px;
+            background-color: #f9f9f9;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .profile-image-container img {
+            border-radius: 50%;
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-image-container img:hover {
+            transform: scale(1.1);
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .skills-container div {
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin: 0 auto 40px;
+        }
+
+    </style>
+{% endblock body %}

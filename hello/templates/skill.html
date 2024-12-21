@@ -1,0 +1,118 @@
+{% extends "navi.html" %}
+
+{% block title %} Skills & Technologies {% endblock title %}
+
+{% block body %}
+    <div class="skills-section" style="padding: 80px 20px; text-align: center; background-color: #f5f5f5; animation: fadeIn 1s ease-in-out;">
+        <h1 style="font-size: 3.5rem; font-weight: 700; color: #333; margin-bottom: 20px;">My Skills</h1>
+        <p style="font-size: 1.3rem; font-weight: 300; color: #555; max-width: 800px; margin: 0 auto 40px;">As a passionate and dedicated student, I have honed my skills in various technologies. Below are the core tools and languages that I work with to build interactive, responsive, and efficient applications.</p>
+
+        <div class="skills-container" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; animation: fadeInUp 2s ease-in-out;">
+            <div style="flex: 1 1 180px; text-align: center; padding: 10px;">
+                <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" style="width: 80px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;">Git</p>
+            </div>
+            <div style="flex: 1 1 180px; text-align: center; padding: 10px;">
+                <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="Python" style="width: 80px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;">Python</p>
+            </div>
+            <div style="flex: 1 1 180px; text-align: center; padding: 10px;">
+                <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" alt="Linux" style="width: 80px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;">Linux</p>
+            </div>
+            <div style="flex: 1 1 180px; text-align: center; padding: 10px;">
+                <img src="https://img.shields.io/badge/Java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" style="width: 80px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;">Java</p>
+            </div>
+            <div style="flex: 1 1 180px; text-align: center; padding: 10px;">
+                <img src="https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white" alt="C" style="width: 80px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;">C</p>
+            </div>
+            <div style="flex: 1 1 180px; text-align: center; padding: 10px;">
+                <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" style="width: 80px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;">HTML5</p>
+            </div>
+            <div style="flex: 1 1 180px; text-align: center; padding: 10px;">
+                <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" style="width: 80px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;">CSS3</p>
+            </div>
+            <div style="flex: 1 1 180px; text-align: center; padding: 10px;">
+                <img src="https://img.shields.io/badge/Visual_Studio_Code-0078D4?style=for-the-badge&logo=visual%20studio%20code&logoColor=white" alt="VSCode" style="width: 80px; margin-bottom: 10px;">
+                <p style="color: #333; font-size: 1.2rem;">VSCode</p>
+            </div>
+        </div>
+
+        <div class="learning-status" style="margin-top: 60px; padding: 40px 20px; background-color: #f0f0f0; border-radius: 8px; animation: fadeInUp 2.5s ease-in-out;">
+            <h2 style="font-size: 2.5rem; font-weight: 700; color: #333;">Currently Learning</h2>
+            <p style="font-size: 1.3rem; color: #555; max-width: 800px; margin: 0 auto;">As a student in the learning stage, I am dedicated to expanding my skills. Currently, I am focusing on mastering frameworks like Django, exploring mobile app development with Android, and gaining hands-on experience in cloud technologies to build scalable solutions.</p>
+        </div>
+    </div>
+
+    <style>
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .skills-section {
+            padding: 80px 20px;
+            text-align: center;
+            background-color: #f5f5f5;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .skills-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            animation: fadeInUp 2s ease-in-out;
+        }
+
+        .skills-container div {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .skills-container div:hover {
+            transform: scale(1.1);
+        }
+
+        .learning-status {
+            margin-top: 60px;
+            padding: 40px 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+            animation: fadeInUp 2.5s ease-in-out;
+        }
+
+        .learning-status h2 {
+            color: #333;
+        }
+
+        .learning-status p {
+            font-size: 1.3rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+{% endblock body %}
